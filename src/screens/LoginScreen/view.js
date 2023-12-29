@@ -10,6 +10,8 @@ import AuthCardWrapper from "components/AuthCardWrapper";
 import AuthLogin from "components/auth-forms/AuthLogin";
 import Logo from "ui-component/Logo";
 import AuthFooter from "ui-component/cards/AuthFooter";
+import Card from "../../components/cards/Card";
+import HiddenCard from "../../components/cards/HiddenCard";
 
 // assets
 
@@ -28,6 +30,40 @@ const LoginScreen = (props) => {
         justifyContent="flex-end"
         sx={{ minHeight: "100vh" }}
       >
+        <Card
+          cardData={{
+            animationDelay: 1000,
+            cardFace: "7",
+            suit: "Diamond",
+            value: 6,
+          }}
+        />
+        <Card
+          cardData={{
+            animationDelay: 1000,
+            cardFace: "9",
+            suit: "Club",
+            value: 8,
+          }}
+        />
+        <HiddenCard
+          applyFoldedClassname={200}
+          cardData={{
+            animationDelay: 1000,
+            cardFace: "8",
+            suit: "Club",
+            value: 7,
+          }}
+        />
+        <HiddenCard
+          cardData={{
+            animationDelay: 1000,
+            cardFace: "7",
+            suit: "Club",
+            value: 6,
+          }}
+        />
+        {/* "Spade": 黑桃, Diamond: 鑽石, Club: 梅花, "Heart": 愛心 */}
         <Grid item xs={12}>
           <Grid
             container
